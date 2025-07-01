@@ -30,8 +30,8 @@ Players take turns dropping colored discs into a 7-column, 6-row board. The firs
 1. Clone the repo
 
 ```bash
-  git clone https://github.com/yashvidoshi/Connect-4.git
-  cd Connect-4
+    git clone https://github.com/yashvidoshi/Connect-4.git
+    cd Connect-4
 ```
 2. Install Flask. Make sure you have Python 3 installed, then:
    ```
@@ -59,4 +59,5 @@ Players take turns dropping colored discs into a 7-column, 6-row board. The firs
   - 🏆 Check if someone won
 - 📖 Flask **reads** the updated files and dynamically updates the frontend
 
+## Built by Yashvi Doshi
 
