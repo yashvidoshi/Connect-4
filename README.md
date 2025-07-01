@@ -23,4 +23,40 @@ Players take turns dropping colored discs into a 7-column, 6-row board. The firs
 
 ---
 
+---
+
+## 🚀 How to Run Locally
+
+1. Clone the repo
+
+```bash
+  git clone https://github.com/yashvidoshi/Connect-4.git
+  cd Connect-4
+```
+2. Install Flask. Make sure you have Python 3 installed, then:
+   ```
+   pip install flask
+    ```
+3. Run the game
+    ```
+    python3 app.py
+    ```
+4. The game will run on this link in your browser:
+   ```
+   http://localhost:5000
+   ```
+   
+
+
+## 🧠 How It Works
+
+- 🗂️ **Board state** is stored in `backend/game_state.txt`
+- 🌐 **Flask** handles routing and receives column input from the user
+- ✏️ Player move is **written** to the backend file (`game_state.txt`)
+- ⚙️ `connect4.cpp` is **compiled and executed** to:
+  - 🔽 Drop the disc
+  - 🧱 Update the board
+  - 🏆 Check if someone won
+- 📖 Flask **reads** the updated files and dynamically updates the frontend
+
 
