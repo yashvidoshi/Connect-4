@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Connect 4</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Connect 4</h1>
+
+    {% if winner %}
+        <h2 style="color: lime;">🎉 Player {{ winner }} wins!</h2>
+    {% else %}
+        <h2>
+            {% if current_player == 'X' %}
+                🔴 Player X's Turn
+            {% else %}
+                🟡 Player O's Turn
+            {% endif %}
+        </h2>
+    {% endif %}
+
+    <form method="post" action="/">
+        <div id="board">
+            {% for row in board %}
+                <div class="row">
+                    {% for cell in row %}
+                        <div class="cell {{ cell }}">{{ cell if cell != '.' else '' }}</div>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </div>
+
+        {% if not winner %}
+            <div class="button-row">
+                {% for col in range(7) %}
+                    <button type="submit" name="column" value="{{ col }}" class="column-btn">
+                        {{ col + 1 }}
+                    </button>
+                {% endfor %}
+            </div>
+        {% else %}
+            <br>
+            <a href="/reset" class="reset-button">🔁 Play Again</a>
+        {% endif %}
+    </form>
+</body>
+</html>
